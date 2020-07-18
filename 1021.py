@@ -7,6 +7,10 @@
 # Return S after removing the outermost parentheses of every primitive string in the primitive decomposition of S.
 
 def descomposeS(S):
+    """
+    :param S: string
+    :return: List[string]
+    """
     countLeft = 0
     countRight = 0
     descomposedS = []
@@ -15,19 +19,15 @@ def descomposeS(S):
         new_string = ""
 
         for i in range (0, len(S)):
-            print("i " + str(i))
             if (S[i] == "("):
                 countLeft = countLeft + 1
                 new_string += S[i]
-                print("new string: " + new_string)
 
             if (S[i] == ")"):
                 countRight = countRight + 1
                 new_string += S[i]
-                print("new string: " + new_string)
 
             if (countLeft == countRight):
-                print("equality")
                 descomposedS.append(new_string)
                 S = S[i + 1: len(S)]
                 print("S " + S)
