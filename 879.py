@@ -24,7 +24,20 @@ class Solution:
     def reverseString1(self, s):
         return s.reverse()
 
+    def swap(self, list, i, j):
+        save = list[i]
+        list[i] = list[j]
+        list[j] = save
+
+        return list
+
+    def reverseString2(self, s):
+        for i in range(0, len(s) // 2):
+            self.swap(s, i, len(s) - 1 - i)
+
+        return list
+
 s = Solution()
-list = ["1", "2", "3", "4", "5", "6"]
-# list = ["1", "2", "3", "4", "5"]
-print(s.reverseString(list))
+# list = ["1", "2", "3", "4", "5", "6"]
+list = ["1", "2", "3", "4", "5"]
+print(s.reverseString2(list))
