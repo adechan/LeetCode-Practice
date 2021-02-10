@@ -20,12 +20,18 @@ class Solution:
                 break
         return -1
 
+    def hasDuplicates(self, char, list):
+        if char in list:
+            return True
+        else:
+            return False
+
     def firstUniqChar1(self, s: str):
         if len(s) == 0:
             return -1
 
         for i in range(0, len(s)):
-            if s[i] in s[0: i] or s[i] in s[i + 1: len(s)]:
+            if self.hasDuplicates(s[i], s[0: i]) or self.hasDuplicates(s[i], s[i + 1:len(s)]):
                 if i == len(s) - 1:
                     return -1
                 else:
@@ -36,5 +42,5 @@ class Solution:
 
 
 s = Solution()
-string = "abcbcdadee"
+string = "abcbcdadeef"
 print(s.firstUniqChar1(string))
