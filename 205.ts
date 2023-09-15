@@ -25,7 +25,7 @@ const isIsomorphic = (s: string, t: string): boolean => {
     return false;
   }
 
-
+  return false;
 };
 
 console.log(isIsomorphic("egg", "add"))
