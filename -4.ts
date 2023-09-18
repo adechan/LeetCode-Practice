@@ -5,11 +5,11 @@
 
 let arr = [5, 3, 8, 1];
 const filterRangeInPlace = (arr: number[], a: number, b: number): void => { 
-  const findNumbersToDelete = arr.filter(value => a > value || value > b);
+  const numbersToDelete = arr.filter(value => a > value || value > b);
 
-  findNumbersToDelete.forEach(element => {
-    const indexToDelete = arr.findIndex(arrElement => element === arrElement);
-    arr.splice(indexToDelete, 1)
+  numbersToDelete.forEach(element => {
+    const index = arr.findIndex(arrElement => element === arrElement);
+    arr.splice(index, 1)
   });
 }
 
