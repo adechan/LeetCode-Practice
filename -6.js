@@ -56,3 +56,5 @@ calculator.addMethod("/", (a, b) => a / b);
 calculator.addMethod("**", (a, b) => a ** b);
 
 console.log(calculator.calculate("2 ** 3"))
+
+export {}
