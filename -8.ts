@@ -15,7 +15,6 @@ type MappedUsers = {
 
 const mapUsers = (users: User[]): MappedUsers[] => {
   const mappedUsers = users
-  .slice()
   .map(user => ({
     id: user.id,
     fullName: `${user.name} ${user.surname}`
