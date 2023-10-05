@@ -2,6 +2,7 @@
 
 Number.prototype[Symbol.iterator] = function () {
   let current = this;
+  console.log(current);
   return {
     next: () => {
       if (current) {
